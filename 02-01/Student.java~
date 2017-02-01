@@ -1,0 +1,66 @@
+
+public class Student {
+    private String firstName;
+    private String lastName;
+    private int id;
+    private int age;
+    
+    public Student (String firstName, String lastName, int id, int age) {
+        this.firstName = firstName;
+        this.lastName  = lastName;
+        this.id        = id;
+        this.age       = age;
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+    
+    public String getLastName(){
+        return lastName;
+    }
+
+    public int getid(){
+        return id;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public void setFirstName(String firstname){
+        this.firstName = firstname;
+    }
+
+    public void setLastName(String lastname){
+        this.lastName = lastname;
+    }
+
+    public void setid(int id){
+        this.id = id;
+    }
+
+    /**
+     * Sets the value of the age. This value must be non-negative. 
+     *
+     * @param value the new, non-negative value of the age.
+     * @throws IllegalArgumentException if a non-negative value is given.
+     */
+    public void setAge(int age){
+        if (age > 0) {
+            this.age = age;
+        } else {
+            throw new IllegalArgumentException();
+        }
+    }
+	
+	
+    public static void main(String[] args) {
+        Student student = new Student("Jacob", "Jeff", 10, 25);
+        student.setLastName("Johnson");
+        student.setFirstName("Steve");
+        student.getFirstName();
+        student.getLastName();
+    }
+
+}
