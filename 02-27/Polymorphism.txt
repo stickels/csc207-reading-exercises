@@ -1,0 +1,9 @@
+(A):
+1. Yes. The line type checks to see that i is within interface I.
+2. It produces C.foo
+
+(B):
+1. Same as in part A. Checks the static type. 
+2. It produces C.bar
+
+Subtyping is pretty percise, and requires you to be very careful about what you are declaring and how you declare it. Some things may seem like they will work with the type system, but won't unless you go through the proper steps. 
